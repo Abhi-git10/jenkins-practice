@@ -9,6 +9,7 @@ stage('test'){
 steps{
 sh '''
 echo "hello world"
+'''
 }
 }
 stage('deply'){
