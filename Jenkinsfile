@@ -1,22 +1,22 @@
-pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                sh 'echo "hi"'
-            }
-        }
-        stage('test') {
-            steps {
-                sh '''
-                    echo "hello world"
-                '''
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo "Deploy stage (add commands here)"
-            }
-        }
-    }
+pipeline{
+stages{
+stage('build'){
+steps {
+sh 'echo "this is build stage"'
+}
+}
+stage('test'){
+steps {
+sh '''
+echo "this is test stage"
+echo "this is used test the stages"
+'''
+}
+}
+stage('deploy'){
+steps {
+sh 'echo "this is deploy stage"'
+}
+}
+}
 }
