@@ -1,0 +1,25 @@
+pipeline{
+agent none
+stages{
+stage ('build'){
+agent { label 'java-node' }
+steps{
+sh 'echo "this stage is build"'
+}
+}
+stage ('deploy'){
+agent { label 'cpgrm' }
+steps {
+sh '''
+echo "this is deploy stage"
+'''
+}
+}
+stage ('test'){
+agent { label 'master' }
+steps {
+sh 'echo "this is test stage"'
+}
+}
+}
+}
