@@ -8,7 +8,7 @@ sh 'echo "this stage is build"'
 }
 }
 stage ('deploy'){
-agent { label 'cpgrm' }
+agent { label 'cprgm' }
 steps {
 sh '''
 echo "this is deploy stage"
